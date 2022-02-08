@@ -13,7 +13,10 @@ const CurrencyRate = () => {
       setCurrencyRate(res.data);
       setUsdRate(1);
       setEurRate(res.data.rate);
-    });
+    })
+    .catch(err => {
+        console.log("error:", err)
+    })
   };
 
   const swap = () => {
@@ -28,7 +31,6 @@ const CurrencyRate = () => {
 
   return (
     <>
-      <div className="wrapper">
         <div className="container">
           <div className="currency">
             <label htmlFor="">USD:</label>
@@ -43,13 +45,16 @@ const CurrencyRate = () => {
             <label htmlFor="">Euro:</label>
             <span>{eurRate}</span>
           </div>
+          <div className="currency">
+            <label htmlFor="">Date:</label>
+            <span>{currencyRate.date}</span>
+          </div>
         </div>
         <div className="buttons">
           <button type="button" onClick={getCurrencyRate}>
             Get currency rate
           </button>
         </div>
-      </div>
     </>
   );
 };
