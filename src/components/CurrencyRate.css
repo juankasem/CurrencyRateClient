@@ -1,0 +1,38 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+  margin: 0 auto;
+  width: 33%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.currency {
+    flex: 1;
+    display: flex;
+}
+
+.buttons {
+  margin: 0 auto;
+  margin-top: 2em;
+}
+
+.button{
+    flex: 0.5;
+}
+
+label {
+    margin-right: 2px;
+    font-weight: 600;
+  }
+
+button {
+  padding: 0.5em 1em;
+  font-weight: 500;
+  cursor: pointer;
+}
